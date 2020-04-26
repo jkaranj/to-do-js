@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 10fr 1fr;
+    grid-template-areas: 
+    "head head head"
+    "but but but"
+    "con con con"
+    "todo todo todo";
+}
+.header{
+    grid-area: head;
+    background-image: url("bg.svg");
+    background-size:cover;
+    padding: 0;
+    position: relative;
+    /* background-color: #371b9d; */
+}.clear{
+    width : 4%;
+    height: auto;
+    position: absolute;
+    right: 60px;
+    top: 40px;
+}
+.clear i{
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+}
+.clear i:hover{
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000;
+    transform: rotate(45deg);
+}
+.butts{
+    grid-area: but;
+    background-color: #ed4266;
+    display: flex;
+    justify-content: center;
+    /* align-self: center; */
+    /* background-color: blue; */
+}
+.butts input[type=button]{
+    height: 100%;
+    width: 33%;
+    border: 2px rgb(177, 54, 80) solid;
+    background-color: #ed4266;
+    color: white;
+    font-size: 150%;
+    padding: 5px;
+    /* margin: 0; */
+}
+.content{
+    grid-area: con;
+    background-color: rgb(214, 214, 214);
+}
+.add-to-do{
+    grid-area: todo;
+    background-color: #ed4266;
+    display: flex;
+    padding: 0;
+    /* justify-content: center; */
+}
+.add-to-do input[type=text]{
+    height: 100%;
+    width: 89%;
+    border: 2px rgb(177, 54, 80) solid;
+    background-color: #ed4266;
+    color: white;
+    caret-color:#ffffff;
+    font-size: 250%;
+    padding: 5px;
+    padding-left: 30px;
+    /* position: absolute; */
+    float: right;
+}
+::placeholder {
+    color: rgb(211, 211, 211);
+    opacity: 1; /* Firefox */
+  }
+  .add-to-do i{
+    width: 11%;
+    height: auto;
+    /* width: 30px; */
+    font-size: 4rem;
+    color: #ffffff;
+    align-self: center;
+    margin-left: 4%;
+}
+
+
+.content ul{
+    padding: 0;
+    padding-top: 20px;
+    margin: 0;
+}
+.item{
+    width: 100%;
+    height: 85px;
+    min-height: 85px;
+    position: relative;
+    display: flex;
+    list-style: none;
+    background-color: rgb(204, 204, 204);
+    font-size: 2.5rem;
+    padding: 2px;
+}
+.item p{
+    width: 80%;
+    align-self: center;
+}
+.item i{
+    width: 10%;
+    padding-left: 2%;
+    align-self: center;
+    /* color: #ed4266; */
+}
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:rgb(36,184,60);
+    /* background-color: rgb(36, 184, 60); */
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : rgb(61, 61, 61);
+}
+.header #date{
+    color: rgb(255, 255, 255);
+    font-size: 5.5rem;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+/* i{
+
+} */
